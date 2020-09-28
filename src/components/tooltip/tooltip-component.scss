@@ -1,0 +1,36 @@
+tooltip-component {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #000000;
+}
+
+.tooltip {
+  display: flex;
+  align-items: center;
+  background-color: #bde3f2;
+  border-radius: 2px;
+  height: 30px;
+  padding: 0 10px;
+
+  &::after {
+    border-color: #bde3f2 transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__label {
+    color: #000000;
+    white-space: nowrap;
+  }
+}
